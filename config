@@ -43,6 +43,7 @@ alert = #bd2c40
 monitor = ${env:MONITOR:}
 width = 100%
 height = 40
+dpi = 75
 ;offset-x = 1%
 ; offset-y = 1%
 radius = 6.0
@@ -64,14 +65,13 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = ComicShannsMono Nerd Font:style=Bold:pixelsize=12;1
-; font-1 = ComicShannsMono Nerd Font:style=Bold:fontformat=truetype:size=8:antialias=false;0
-; font-2 = ComicShannsMono Nerd Font:style=Bold:pixelsize=10;1
+font-1 = Noto Color Emoji 
 
 modules-left = bspwm i3
 ; modules-center = mpd
 ; modules-right = filesystem backlight alsa pulseaudio xkeyboard memory cpu battery date 
-; modules-right = filesystem alsa pulseaudio xkeyboard memory cpu battery date 
-modules-right = alsa pulseaudio xkeyboard battery date 
+modules-right = filesystem alsa pulseaudio xkeyboard memory cpu battery date 
+; modules-right = alsa pulseaudio xkeyboard battery date 
 
 tray-position = right
 tray-padding = 2
@@ -319,7 +319,7 @@ format-charging-underline = #ffb52a
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = "🔋"
 ; format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-prefix-foreground =  #1AD127
 format-full-underline = ${self.format-charging-underline}
@@ -327,6 +327,11 @@ format-full-underline = ${self.format-charging-underline}
 label-full = Fully Charged
 label-charging = Charging: %percentage%% 
 label-discharging = Draining: %percentage%%
+
+; Fun Battery Labels
+; label-full = Satisfied
+; label-charging = Ah Ah Ah!: %percentage%% 
+; label-discharging = Need Sex!!!: %percentage%%
 
 ramp-capacity-0 = " "
 ramp-capacity-1 = " "
@@ -336,6 +341,11 @@ ramp-capacity-foreground = ${colors.foreground-alt}
 animation-charging-0 = " "
 animation-charging-1 = " "
 animation-charging-2 = " "
+
+; Fun Emoji Animation when charging 
+; animation-charging-0 = "🍆"
+; animation-charging-1 = "💦"
+; animation-charging-2 = "👌"
 ; animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-foreground = #EFF70E
 animation-charging-framerate = 750
@@ -343,6 +353,11 @@ animation-charging-framerate = 750
 animation-discharging-0 = " "
 animation-discharging-1 = " "
 animation-discharging-2 = " "
+
+; Fun Emoji Animation when discharging 
+; animation-discharging-0 = "🛏️"
+; animation-discharging-1 = "🌋"
+; animation-discharging-2 = "🏩"
 ; animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-foreground = #FC0B0B
 animation-discharging-framerate = 750
